@@ -213,7 +213,11 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/barang', [BarangController::class, 'tampilkan']);
+
 Route::get('/pesanan', [PesananController::class, 'tampilkan']);
+
 Route::get('/suplier', [SuplierController::class, 'tampilkan']);
+
 Route::get('/pembelian', [PembelianController::class, 'tampilkan']);
+
 Route::get('/pembeli', [PembeliController::class, 'tampilkan']);

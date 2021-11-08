@@ -3,16 +3,31 @@
     <title>array</title>
 </head>
 <body>
-    <h2>Tampilkan Data Barang</h2>
+    <center>
+        <table border=1>
+        <tr><th colspan ="6" rowspan ="1"><b> DATA BARANG</b></th></th></tr>
 
-    @foreach ($brg as $data)
-    <p>Id Barang : {{ $data -> id_barang}}</p>
-    <p>Nama : {{ $data -> nama}}</p>
-    <p>Varian : {{ $data -> varian}}</p>
-    <p>Harga Beli : {{ $data -> harga_beli}}</p>
-    <p>Harga Jual : {{ $data -> harga_jual}}</p>
-    <hr>
-    @endforeach
+
+        <tr>
+            <th rowspan = 1 colspan= 1>id barang</th>
+             <th rowspan = 1 colspan= 1>Nama</th>
+              <th rowspan = 1 colspan= 1>Varian</th>
+               <th rowspan = 1 colspan= 1>Harga Beli</th>
+                <th rowspan = 1 colspan= 1>Harga Jual</th>
+        </tr>
+
+        @foreach ($brg as $data)
+        <tr>
+            <td>{{ $data ['id_barang'] }}</td>
+            <td>{{ $data ['nama'] }}</td>
+            <td>{{ $data ['varian'] }}</td>
+            <td>{{ $data ['harga_beli'] }}</td>
+               <td>{{ $data ['harga_jual'] }}</td>
+        </tr>
+
+        @endforeach
+</table>
+    </center>
 
 </body>
 </html>
